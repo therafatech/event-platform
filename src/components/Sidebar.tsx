@@ -1,11 +1,19 @@
 import { useGetLessonsQuery } from "../graphql/generated";
 import { Lesson } from "./Lesson";
 
-export function Sidebar() {
+interface SidebarProps {
+  show: boolean;
+}
+
+export function Sidebar(props: SidebarProps) {
   const { data } = useGetLessonsQuery();
 
   return (
-    <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600">
+    <aside
+      className={`z-[100] fixed top-[75px] bottom-0 right-0 lg:top-0 lg:relative w-[348px] bg-gray-700 p-6 border-l border-gray-600 ${
+        !props.show ? "max-w-0 overflow-hidden p-0" : ""
+      }`}
+    >
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma de aulas
       </span>
