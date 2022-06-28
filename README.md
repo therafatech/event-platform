@@ -30,7 +30,8 @@ This project is being developed with the following technologies:
 
 ## 💻 Project
 
-This project is a web events platform being created during the IGNITE LAB week by Rocketseat.
+This project is a web events platform implemented during IGNITE LAB week by Rocketseat.
+Responsivity has been added in addition to the original design.
 
 ## 🔖 Layout
 
